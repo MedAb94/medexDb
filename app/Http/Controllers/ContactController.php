@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use App\Models\ContactType;
-use App\Models\country;
+use App\Models\Country;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
