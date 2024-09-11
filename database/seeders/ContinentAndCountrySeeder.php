@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Continent;
-use App\Models\country;
+use App\Models\Country;
 use Illuminate\Database\Seeder;
 
 class ContinentAndCountrySeeder extends Seeder

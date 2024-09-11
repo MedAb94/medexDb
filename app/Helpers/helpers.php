@@ -432,27 +432,27 @@ if (!function_exists('getIcon')) {
         }
     }*/
 
-//    if (!function_exists('isActiveRoute')) {
-//        function isActiveRoute($routeNames): string
-//        {
-//            if (!is_array($routeNames)) {
-//                $routeNames = [$routeNames];
-//            }
-//
-//            return in_array(Route::currentRouteName(), $routeNames) ? 'active' : '';
-//        }
-//    }
+    if (!function_exists('isActiveRoute')) {
+        function isActiveRoute($routeNames): string
+        {
+            if (!is_array($routeNames)) {
+                $routeNames = [$routeNames];
+            }
 
-//    if (!function_exists('isActiveMenu')) {
-//        function isActiveMenu($routeNames): string
-//        {
-//            if (!is_array($routeNames)) {
-//                $routeNames = [$routeNames];
-//            }
-//
-//            return in_array(Route::currentRouteName(), $routeNames) ? 'show' : '';
-//        }
-//    }
+            return in_array(Route::currentRouteName(), $routeNames) ? 'active' : '';
+        }
+    }
+
+    if (!function_exists('isActiveMenu')) {
+        function isActiveMenu($routeNames): string
+        {
+            if (!is_array($routeNames)) {
+                $routeNames = [$routeNames];
+            }
+
+            return in_array(Route::currentRouteName(), $routeNames) ? 'show' : '';
+        }
+    }
 
 
 }
