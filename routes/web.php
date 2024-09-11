@@ -24,9 +24,10 @@ require_once 'globalModelsRoute.php';
 
 Route::group(['prefix' => '', 'middleware' => ['auth', 'verified']], function () {
     Route::get('/', [ContactController::class, 'index'])->name('contacts');
-    Route::get('/create', [ContactController::class, 'create'])->name('contacts.create');
+    Route::get('/create/{id?}', [ContactController::class, 'create'])->name('contacts.create');
     Route::get('/data', [ContactController::class, 'dt'])->name('contacts.dt');
     Route::post('/store', [ContactController::class, 'store'])->name('contacts.store');
+    Route::delete('/delete/{id}', [ContactController::class, 'delete'])->name('contacts.delete');
 });
 
 

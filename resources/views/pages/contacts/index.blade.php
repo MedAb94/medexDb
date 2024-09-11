@@ -9,12 +9,6 @@
                     <i class="fa fa-add"></i>
                     Nouveau
                 </button>
-                <button
-                    onclick="openInModal('{{ route("contacts.create")}}')"
-                    class="btn btn-info btn-active-warning btn-outline-info">
-                    <i class="fa fa-file-import"></i>
-                    Importer
-                </button>
             </div>
         </div>
         <div class="card-body">

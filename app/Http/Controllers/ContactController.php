@@ -17,7 +17,7 @@ class ContactController extends Controller
     //dt
     public function dt()
     {
-        $contacts = Contact::query();
+        $contacts = Contact::query()->latest();
         $type_id = request()->type_id;
         $country_id = request()->country_id;
 
@@ -45,18 +45,22 @@ class ContactController extends Controller
                 return "<a href='mailto:" . $contact->email . "'>" . $contact->email . "</a>";
             })
             ->addColumn('actions', function ($contact) {
-                return "--";
+                return view('pages.contacts.actions', compact('contact'));
             })
             ->rawColumns(['website', 'email', 'actions'])
             ->make(true);
     }
 
     public
-    function create()
+    function create($id = null)
     {
+        $contact = null;
+        if ($id) {
+            $contact = Contact::findOrfail($id);
+        }
         $countries = Country::all();
         $types = ContactType::all();
-        return view('pages.contacts.create', compact('countries', 'types'));
+        return view('pages.contacts.create', compact('countries', 'types', 'contact'));
     }
 
     //store
@@ -65,9 +69,20 @@ class ContactController extends Controller
     {
         request()->validate([
             'name' => 'required',
+            'email' => 'nullable|email',
+            'type_id' => 'required'
         ]);
 
-        Contact::create($data->all());
-        return redirect()->route('contacts');
+        Contact::updateOrCreate(['id' => $data->id], $data->all());
+        return response()->json([
+            'message' => 'Le contact a été ' . ($data->id ? 'mis à jour' : 'créé') . ' avec succès'
+        ], 200);
+    }
+
+    public function delete($id)
+    {
+        $contact = Contact::findOrfail($id);
+        $contact->delete();
+        return response()->json(['message' => 'Contact deleted successfully'], 200);
     }
 }
