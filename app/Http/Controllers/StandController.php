@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Stand;
-use Illuminate\Http\Request;
 
 class StandController extends Controller
 {
@@ -33,15 +31,13 @@ class StandController extends Controller
         }
 
         return datatables()->of($contacts)
-
             ->editColumn('category_id', function ($row) {
                 return $row->category->name ?? "";
             })
-
             ->addColumn('actions', function ($instance) {
                 return view('pages.stands.actions', compact('instance'));
             })
-            ->rawColumns([ 'actions'])
+            ->rawColumns(['actions'])
             ->make(true);
     }
 
@@ -59,8 +55,8 @@ class StandController extends Controller
         $mpdf->SetMargins(0, 0, 10, 0);
         $mpdf->SetDisplayMode('fullpage');
         //direction
-        $mpdf->SetDirectionality('rtl');
-        $mpdf->AddPage('L', 'A4', '', '', '', 10, 10, 10, 10, 0, 0);
+//        $mpdf->SetDirectionality('rtl');
+        $mpdf->AddPage('L', 'A4', '', '', '', 5, 5, 10, 10, 0, 0);
         $mpdf->writeHTML(
             view('pages.stands.plan_pdf', [
                 'aStands' => $aStands,
