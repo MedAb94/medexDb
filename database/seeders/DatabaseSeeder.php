@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Http\Controllers\StandController;
 use App\Models\GlobalModel;
 use Illuminate\Database\Seeder;
 
@@ -36,6 +37,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UsersSeeder::class,
             ContinentAndCountrySeeder::class,
+            StandSeeder::class,
         ]);
 
     }

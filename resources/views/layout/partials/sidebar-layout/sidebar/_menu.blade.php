@@ -13,6 +13,10 @@
             @include('pages.contacts.menu')
             <!--end:Menu item dashboard-->
 
+            <!--begin:Menu item dashboard-->
+            @include('pages.stands.menu')
+            <!--end:Menu item dashboard-->
+
         </div>
         <!--end::Menu-->
     </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ExcelExportsController;
+use App\Http\Controllers\StandController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -30,6 +31,11 @@ Route::group(['prefix' => '', 'middleware' => ['auth', 'verified']], function ()
     Route::delete('/delete/{id}', [ContactController::class, 'delete'])->name('contacts.delete');
 });
 
+Route::group(['prefix' => 'stands', 'middleware' => ['auth', 'verified']], function () {
+    Route::get('/', [StandController::class, 'index'])->name('stands');
+    Route::get('dt', [StandController::class, 'dt'])->name('stands.dt');
+    Route::get('plan', [StandController::class, 'plan'])->name('stands.plan');
+});
 
 //error
 Route::get('/error', function () {
