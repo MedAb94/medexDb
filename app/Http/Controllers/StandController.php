@@ -23,11 +23,11 @@ class StandController extends Controller
             $contacts->where('category_id', $category_id);
         }
         if (isset($booking) && $booking != 9) {
-            $contacts->where('booked', $booking);
+            $contacts->whereNotNull('booked_for');
         }
 
         if (isset($payment) && $payment != 9) {
-            $contacts->where('paid', $payment);
+            $contacts->whereNotNull('paid_by');
         }
 
         return datatables()->of($contacts)
@@ -55,7 +55,7 @@ class StandController extends Controller
         $mpdf->SetMargins(0, 0, 10, 0);
         $mpdf->SetDisplayMode('fullpage');
         //direction
-//        $mpdf->SetDirectionality('rtl');
+        $mpdf->SetDirectionality('rtl');
         $mpdf->AddPage('L', 'A4', '', '', '', 5, 5, 10, 10, 0, 0);
         $mpdf->writeHTML(
             view('pages.stands.plan_pdf', [
