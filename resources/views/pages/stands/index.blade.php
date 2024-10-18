@@ -72,7 +72,7 @@
             <x-dt
                 id="dt"
                 link="{{route('stands.dt')}}"
-                colonnes="number,category_id,price,booked_for,paid_by,actions"
+                colonnes="number,category_id,price,booked_for,paid_by"
                 filters_form="filters_form"
                 footer_callback="updateFooter"
             >
@@ -83,7 +83,7 @@
                     <th>Prix</th>
                     <th>Reservé pour</th>
                     <th>Payé par</th>
-                    <th style="min-width: 250px">Actions</th>
+{{--                    <th style="min-width: 250px">Actions</th>--}}
                 </tr>
                 </thead>
             </x-dt>
