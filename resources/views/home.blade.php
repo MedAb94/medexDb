@@ -312,12 +312,10 @@
             .form-control {
                 background-color: rgba(255, 255, 255, 0.1);
                 border: 1px solid rgba(255, 255, 255, 0.3);
-                color: #fff;
+
             }
 
-            .form-control::placeholder {
-                color: rgba(255, 255, 255, 0.7);
-            }
+
 
             .btn-primary {
                 background-color: #000080;
@@ -337,7 +335,7 @@
             <div class="dah">
                 <div class="banner">
                     <div class="banner-content">
-                        <img src="/dah.jpeg" alt="Dr. Mariem Mohamed Fadel Dah" class="banner-image">
+                        <img src="/contacts/public/dah.jpeg" alt="Dr. Mariem Mohamed Fadel Dah" class="banner-image">
                         <div class="banner-text">
                             SOUS LE HAUT PATRONAGE DE<br>
                             LA PREMIERE DAME<br>
@@ -417,28 +415,28 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card">
-                        <img src="/logos/mr.png" alt="Partner icon" class="partner-icon">
+                        <img src="/contacts/public/logos/mr.png" alt="Partner icon" class="partner-icon">
                         <h3 class="partner-name">Ministère de la Santé</h3>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card">
-                        <img src="/logos/mr.png" alt="Partner icon" class="partner-icon">
+                        <img src="/contacts/public/logos/mr.png" alt="Partner icon" class="partner-icon">
                         <h3 class="partner-name">Ministère du Commerce et du Tourisme</h3>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card">
-                        <img src="/logos/ped.png" alt="Partner icon" class="partner-icon">
+                        <img src="/contacts/public/logos/ped.png" alt="Partner icon" class="partner-icon">
                         <h3 class="partner-name">Société Mauritanienne de Pédiatrie</h3>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card">
-                        <img src="/logos/logosmart.png" alt="Partner icon" class="partner-icon">
+                        <img src="/contacts/public/logos/logosmart.png" alt="Partner icon" class="partner-icon">
                         <h3 class="partner-name">SMART MS SA</h3>
                     </div>
                 </div>
@@ -604,13 +602,11 @@
                     </div>
                 </div>
                 <div class="col-md-6 form-section">
-                    <h2 class="mb-4">Veuillez activer JavaScript dans votre navigateur pour remplir ce formulaire.</h2>
+                    <h2 class="mb-4">Nous contacter</h2>
                     <form>
+
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Name *" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Prénom">
+                            <input type="text" class="form-control" placeholder="Prénom *" required>
                         </div>
                         <div class="mb-3">
                             <input type="text" class="form-control" placeholder="Nom">
@@ -619,9 +615,9 @@
                             <input type="email" class="form-control" placeholder="Email*" required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Comment or Message"></textarea>
+                            <textarea class="form-control" rows="4" placeholder="Message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Envoyer un message</button>
+                        <button type="submit" class="btn btn-primary mx-auto" >Envoyer un message</button>
                     </form>
                 </div>
             </div>
