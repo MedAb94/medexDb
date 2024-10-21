@@ -27,6 +27,7 @@ Route::group(['prefix' => '', 'middleware' => []], function () {
         return view('home');
     })->name('site');
 });
+
 Route::group(['prefix' => '', 'middleware' => ['auth', 'verified']], function () {
     Route::get('/', [ContactController::class, 'index'])->name('contacts');
     Route::get('/create/{id?}', [ContactController::class, 'create'])->name('contacts.create');
