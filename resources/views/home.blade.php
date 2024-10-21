@@ -424,7 +424,7 @@
 
 <section class="hero-section pt-4">
     <img src="/contacts/public/logo2024.png" alt="Medical Gate of Africa Logo" class="logo">
-    <a class="btn btn-primary inscrire" href="https://inscriptions.medex.mr/forms?event=2" target="_blank">
+    <a class="btn btn-primary inscrire event-details" href="https://inscriptions.medex.mr/forms?event=2" target="_blank">
         Inscrire
     </a>
     <div class="container py-5 mt-4">
