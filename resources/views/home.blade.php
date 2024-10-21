@@ -532,6 +532,18 @@
                         <h3 class="partner-name">Société Mauritanienne de Pédiatrie</h3>
                     </div>
                 </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="partner-card">
+                        <img src="/contacts/public/logos/ordre.png" alt="Partner icon" class="partner-icon">
+                        <h3 class="partner-name">Ordre National des Médecins de Mauritanie</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="partner-card">
+                        <img src="/contacts/public/logos/zayed.png" alt="Partner icon" class="partner-icon">
+                        <h3 class="partner-name">Centre Hospitalier Cheikh Zayed</h3>
+                    </div>
+                </div>
 
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card">
