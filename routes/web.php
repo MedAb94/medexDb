@@ -22,7 +22,11 @@ require_once 'userRoutes.php';
 require_once 'rolesAndPermissionsRoute.php';
 require_once 'globalModelsRoute.php';
 
-
+Route::group(['prefix' => '', 'middleware' => []], function () {
+    Route::get('/site', function () {
+        return view('home');
+    })->name('site');
+});
 Route::group(['prefix' => '', 'middleware' => ['auth', 'verified']], function () {
     Route::get('/', [ContactController::class, 'index'])->name('contacts');
     Route::get('/create/{id?}', [ContactController::class, 'create'])->name('contacts.create');
