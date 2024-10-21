@@ -424,7 +424,8 @@
 
 <section class="hero-section pt-4">
     <img src="/contacts/public/logo2024.png" alt="Medical Gate of Africa Logo" class="logo">
-    <a class="btn btn-primary inscrire event-details" href="https://inscriptions.medex.mr/forms?event=2" target="_blank">
+    <a class="btn btn-primary inscrire event-details" href="https://inscriptions.medex.mr/forms?event=2"
+       target="_blank">
         Inscrire
     </a>
     <div class="container py-5 mt-4">
@@ -462,7 +463,7 @@
             </div>
             <div class="location-badge">
                 <i class="fa fa-map-marker-alt"></i>
-                Nouakchott Congress Palace, Mauritania
+                Palais des congrès, Nouakchott - Mauritania
             </div>
         </div>
     </div>
@@ -484,11 +485,11 @@
 
                 <ul class="section-list mb-5">
                     <li>Section des hôpitaux et cliniques privées</li>
-                    <li>Section des pharmacies</li>
                     <li>Section des importateurs de médicaments</li>
-                    <li>Section de la santé animale</li>
                     <li>Section d'équipements médicaux</li>
+                    <li>Section des pharmacies</li>
                     <li>Section des laboratoires</li>
+                    <li>Section de la santé animale</li>
                 </ul>
 
                 <p class="lead">
@@ -696,7 +697,8 @@
     <div class="container">
 
 
-        <a class="btn btn-outline-primary mt-2 float-end " href="https://inscriptions.medex.mr/forms?event=2" target="_blank">
+        <a class="btn btn-outline-primary mt-2 float-end " href="https://inscriptions.medex.mr/forms?event=2"
+           target="_blank">
             Inscrivez-vous maintenant
         </a>
     </div>
@@ -721,7 +723,7 @@
                     </div>
                     <div>
                         <h3>Téléphone</h3>
-                        <p>+222 36293639 / +222 26212622 / +222 46420364</p>
+                        <p>+222 46420364 /+222 36293639 / +222 26212622 </p>
                     </div>
                 </div>
                 <div class="info-item d-flex align-items-center">
