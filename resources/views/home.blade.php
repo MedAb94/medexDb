@@ -9,6 +9,81 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <style>
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stat-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            flex: 0 0 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        @media (min-width: 768px) {
+            .stat-item {
+                flex: 0 0 calc(16.666% - 20px);
+                max-width: calc(16.666% - 20px);
+            }
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #343a40;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .coming-soon {
+            font-size: 1.5rem;
+            color: #28a745;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .hero-section {
             background: linear-gradient(180deg, #e8f4f8 0%, #b8d8e7 100%);
             min-height: 100vh;
@@ -316,60 +391,71 @@
             }
 
 
-
             .btn-primary {
                 background-color: #000080;
                 border: none;
             }
         }
 
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            max-width: 200px;
+            z-index: 1000;
+        }
 
+        .hero-image {
+            max-height: 350px;
+            margin: auto;
+        }
     </style>
 
 
 </head>
 <body>
-<div class="hero-section">
-    <div class="container py-5">
-        <div class="text-center ">
-            <div class="dah">
-                <div class="banner">
-                    <div class="banner-content">
-                        <img src="/contacts/public/dah.jpeg" alt="Dr. Mariem Mohamed Fadel Dah" class="banner-image">
-                        <div class="banner-text">
-                            SOUS LE HAUT PATRONAGE DE<br>
-                            LA PREMIERE DAME<br>
-                            DR. MARIEM MOHAMED FADEL DAH
-                        </div>
+
+<section class="hero-section pt-4">
+    <img src="/contacts/public/logo.png" alt="Medical Gate of Africa Logo" class="logo">
+    <div class="container py-5 mt-4">
+        <div class="dah mb-4">
+            <div class="banner">
+                <div class="banner-content">
+                    <img src="/contacts/public/dah.jpeg" alt="Dr. Mariem Mohamed Fadel Dah"
+                         class="banner-image">
+                    <div class="banner-text">
+                        SOUS LE HAUT PATRONAGE DE<br>
+                        LA PREMIERE DAME<br>
+                        DR. MARIEM MOHAMED FADEL DAH
                     </div>
                 </div>
             </div>
-            <h1 class="text-primary h4 mb-4">Medical Gate of Africa</h1>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="display-6 fw-bold mb-4">
-                        Bienvenue à MEDEX 2024
-                    </h2>
-                    <p class="lead mb-5">
-                        La première foire internationale de la santé en Mauritanie. un événement
-                        inédit sous le thème de l’innovation médicale. Organisé par la Fédération Nationale de la Santé,
-                        cet événement annuel est conçu pour catalyser le développement du secteur médical en Afrique, en
-                        répondant aux défis critiques pour assurer un avenir sain à tout le continent.
-                    </p>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <div class="event-details">
-                    <i class="fa fa-calendar text-white"></i>
-                    November 22-24
-                </div>
-                <div class="location-badge">
-                    <i class="fa fa-map-marker-alt"></i>
-                    Nouakchott Congress Palace, Mauritania
-                </div>
+        </div>
+        <h1 class="text-primary h4 mb-4 slogan">Medical Gate of Africa</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+                <h2 class="display-6 fw-bold mb-4">
+                    Bienvenue à MEDEX 2024
+                </h2>
+                <p class="lead mb-5">
+                    La première foire internationale de la santé en Mauritanie. un événement
+                    inédit sous le thème de l’innovation médicale. Organisé par la Fédération Nationale de la Santé,
+                    cet événement annuel est conçu pour catalyser le développement du secteur médical en Afrique, en
+                    répondant aux défis critiques pour assurer un avenir sain à tout le continent.
+                </p>
             </div>
         </div>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <div class="event-details">
+                <i class="fa fa-calendar text-white"></i>
+                November 22-24
+            </div>
+            <div class="location-badge">
+                <i class="fa fa-map-marker-alt"></i>
+                Nouakchott Congress Palace, Mauritania
+            </div>
+        </div>
+    </div>
     </div>
 
     <!-- New Organizers Section -->
@@ -426,6 +512,19 @@
                         <h3 class="partner-name">Ministère du Commerce et du Tourisme</h3>
                     </div>
                 </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="partner-card">
+                        <img src="/contacts/public/logos/eu.png" alt="Partner icon" class="partner-icon">
+                        <h3 class="partner-name">Union européenne</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="partner-card">
+                        <img src="/contacts/public/logos/camec.png" alt="Partner icon" class="partner-icon">
+                        <h3 class="partner-name">CAMEC</h3>
+                    </div>
+                </div>
 
                 <div class="col-md-6 col-lg-3">
                     <div class="partner-card">
@@ -445,6 +544,7 @@
     </section>
     <!-- Previous sections remain -->
 
+    <!-- why participate -->
     <section class="why-participate">
         <div class="container">
             <div class="row mb-5">
@@ -500,39 +600,43 @@
         </div>
     </section>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-2 stat-item">
+    <div class="container my-5">
+        <h1 class="mb-5">Statistiques de l'Événement</h1>
+        <div class="stats-container">
+            <div class="stat-item">
                 <div class="stat-number">+100</div>
                 <div class="stat-label">Stands</div>
             </div>
-            <div class="col-md-2 stat-item">
+            <div class="stat-item">
                 <div class="stat-number">+20</div>
-                <div class="stat-label">Démonstration en direct</div>
+                <div class="stat-label">Démonstrations en direct</div>
             </div>
-            <div class="col-md-2 stat-item">
+            <div class="stat-item">
                 <div class="stat-number">+50</div>
                 <div class="stat-label">Pays participants</div>
             </div>
-            <div class="col-md-2 stat-item">
+            <div class="stat-item">
                 <div class="stat-number">+2000</div>
                 <div class="stat-label">Visiteurs</div>
             </div>
-            <div class="col-md-2 stat-item">
+            <div class="stat-item">
                 <div class="stat-number">+40</div>
                 <div class="stat-label">Spécialités médicales</div>
             </div>
-            <div class="col-md-2 stat-item">
+            <div class="stat-item">
                 <div class="stat-number">+200</div>
                 <div class="stat-label">B2B</div>
             </div>
         </div>
-
-        <h1 class="mt-5">Programme des Conférences</h1>
-        <p class="coming-soon">Bientôt</p>
     </div>
 
-    <div class="coming-soon">
+    <section class="program">
+
+        <h1 class="mt-5">Programme des Conférences</h1>
+        <p class="coming-soon">Bientôt disponible</p>
+    </section>
+
+    <section class="coming-soon">
         <div class="container main-container">
             <h1 class="text-center">Nous vous attendons à Nouakchott pour trois jours de découvertes, de networking et
                 de développement stratégique</h1>
@@ -567,13 +671,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="contact-form">
+    <div class="contact-form mt-5">
         <div class="container main-container">
             <div class="row">
-                <div class="col-md-6 info-section">
-                    <div class="info-item d-flex align-items-center">
+                <div class="col-md-6 info-section text-dark pt-5">
+                    <div class="info-item d-flex align-items-center ">
                         <div class="info-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -617,7 +721,7 @@
                         <div class="mb-3">
                             <textarea class="form-control" rows="4" placeholder="Message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary mx-auto" >Envoyer un message</button>
+                        <button type="submit" class="btn btn-primary mx-auto">Envoyer un message</button>
                     </form>
                 </div>
             </div>
@@ -625,9 +729,9 @@
     </div>
 
 
-</div>
+    </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
