@@ -401,7 +401,14 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            max-width: 200px;
+            max-width: 150px;
+            z-index: 1000;
+        }
+
+        .inscrire {
+            position: absolute;
+            top: 20px;
+            right: 20px;
             z-index: 1000;
         }
 
@@ -417,6 +424,9 @@
 
 <section class="hero-section pt-4">
     <img src="/contacts/public/logo2024.png" alt="Medical Gate of Africa Logo" class="logo">
+    <a class="btn btn-primary inscrire" href="https://inscriptions.medex.mr/forms?event=2" target="_blank">
+        Inscrire
+    </a>
     <div class="container py-5 mt-4">
         <div class="dah mb-4">
             <div class="banner">
@@ -682,6 +692,13 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container">
+
+
+        <a class="btn btn-outline-primary mt-2 float-end " href="https://inscriptions.medex.mr/forms?event=2" target="_blank">
+            Inscrivez-vous maintenant
+        </a>
     </div>
 </section>
 
