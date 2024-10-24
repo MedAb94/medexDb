@@ -15,4 +15,16 @@ class Stand extends Model
         return $this->belongsTo(StandCategory::class);
     }
 
+    //is paid
+    public function getIsPaidAttribute()
+    {
+        return $this->paid_by != null;
+    }
+
+    //is booked
+    public function getIsBookedAttribute()
+    {
+        return $this->booked_for != null;
+    }
+
 }
