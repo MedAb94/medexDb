@@ -734,7 +734,6 @@
             <div class="col-md-6 form-section">
                 <h2 class="mb-4">Nous contacter</h2>
                 <form>
-
                     <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Prénom *" required>
                     </div>
